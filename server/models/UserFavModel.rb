@@ -1,3 +1,3 @@
-class User < ActiveRecord::Base
+class UserFav < ActiveRecord::Base
 
 end	

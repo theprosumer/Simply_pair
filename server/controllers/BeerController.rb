@@ -1,0 +1,22 @@
+class BeerController < ApplicationController
+
+# render beer page which loops through and lists each beer type on a div 
+# on click of any div it sends you to beer pairs page
+
+	get '/' do
+		erb :beers
+	end
+	
+	get '/:id' do
+		
+	end
+
+	post '/' do
+	end
+
+	patch '/:id' do
+	end
+
+	delete '/:id' do
+	end
+end	

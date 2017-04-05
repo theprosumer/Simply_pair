@@ -1,0 +1,36 @@
+<!--Display pairings of food with wines or food with beers depending-->
+<!--on whic type was clicked-->
+
+<!--Top Nav-->
+<div id="topNav">
+	<ul>
+		<li href="/home">Home</li>
+		<li href="/logout">Logout</li>
+	</ul>
+</div>
+
+<!--General Beer Pic-->
+<div class="categoryPic">
+	<img src="*">
+</div>
+
+<!--A Subheading of the selected wine type-->
+<div id="typeTitle">
+	<h3><%=beer.type.target%></h3>>
+</div>
+
+<!--
+<div class="description">
+	<p><span class="caps">T</span>ry a <%=beer.type%>.
+	It pairs wonderfully with <%=this.food.types%>
+	</p>
+</div> -->
+
+<!--Food Type with List of Wines or Beers by Type-->
+<div class="container">
+	<%=food.type%> Pairs With <%=pairs_with%> 
+</div>
+
+<!--Button to make another pairing-->
+<button id="pairAnother">	
+</button>

@@ -5,7 +5,7 @@ require 'sinatra/base'
 require './controllers/ApplicationController'
 require './controllers/BeerController'
 require './controllers/WineController'
-require './controllers/PairController'
+# require './server//controllers/PairController'
 require './controllers/UserController'
 require './controllers/FoodController'
 require './controllers/HomeController'
@@ -14,13 +14,13 @@ require './controllers/HomeController'
 require './models/UserModel'
 require './models/WineModel'
 require './models/BeerModel'
-require './models/PairModel'
-require './models/UserFavModel'
+# require './server/models/PairModel'
+# require './server/models/UserFavModel'
 
 # map/run Controllers
-map('./'){run ApplicationController}
-map('./home'){run HomeController}
-map('./beers'){run BeerController}
-map('./wines'){run WineController}
-map('./foods'){run FoodController}
-map('./pairs'){run PairController}	
+map('/') {run ApplicationController}
+map('/home'){run HomeController}
+map('/beers'){run BeerController}
+map('/wines'){run WineController}
+map('/foods'){run FoodController}
+# map('/pairs'){run PairController}	

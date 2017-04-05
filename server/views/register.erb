@@ -1,0 +1,38 @@
+<!--Login and Registration Page-->
+<div id="mainContainer">
+	<img class="main_image" src="/images/Wine&Cheese.png"/>
+
+	<!--App Name and Subtitle-->
+	<h1 id="AppName"><span>Simply</span><span>Pair</span></h1>
+	<p>Food and Drink Pairing Made Simple</p>
+
+
+	<!--Login Form Inside A container-->
+<p>Welcome Please Register</p><%=@message%>
+<form action="/home/register" method="POST">
+	<input type="username" name="username" placeholder="Username">
+	<input type="password" name="password" placeholder="Password">
+	<button>JOIN!</button> 
+</form>
+<p>Already a Member? <a href="/home/login">Log In</a></p>
+
+<!--Message as a block element displays on failed login-->
+	<div id="loginMsg"><%=@message%></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
