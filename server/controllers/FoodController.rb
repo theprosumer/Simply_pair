@@ -4,7 +4,8 @@ class FoodController < ApplicationController
 # sends to pairs page and shows wines or beers that pair with that food type
 
 	get '/foods' do
-		erb :foods
+		@foods = Food.all
+		erb :foods	
 	end
 
 	get '/:id' do

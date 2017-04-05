@@ -1,10 +1,11 @@
 class UserController < ApplicationController
 
-	get '*' do
-	end
-
 	get '/' do
 	end
+
+	# get '/favs' do
+	# 	erb :favorites
+	# end
 	
 	get '/:id' do
 	end

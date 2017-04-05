@@ -11,14 +11,16 @@
 
 <!--Wine Category Pic-->
 <div class="categoryPic">
-	<img src="*">
+	<img src="images/wines.jpg" class="img-responsive">
 </div>
 
-<!--List of Wines by Type-->
-<div class="container">
-	<%=wine.type%>
-</div>
+<!--List of Wines by Type for each wine type render a div with a class of div-btn with a winetype--> 
+<% @wines.each do |wine| %>
+	<div class="div_btn">
+		<%= wine.wine_type %>
+	</div>	
+<% end %>	
 
 <!--Button to make another pairing-->
-<button id="pairAnother">	
+<button id="pairAnother"> Pair Another Wine	
 </button>

@@ -9,9 +9,13 @@
 </div>
 
 <!--List of Wines by Type-->
-<div class="container">
-	<%=user.pairs.favorites%>
-</div>
+Welcome <%= @user.username %> 
+Your Favorite Pairings
+<ul>
+<% @user.favorites.each do |favs| %>				<!--loop through each user favorite pair-->
+	<li><%= favs.pair %></li>						<!--list each pairing-->
+<% end %>
+</ul>
 
 <!--Button to make another pairing-->
 <button id="pairAnother">	

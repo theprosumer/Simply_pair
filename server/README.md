@@ -26,3 +26,6 @@ Real World Future Dev Opportunities
 6.  Add cocktails - as a product restaurants and bars can use to help staff pair meals and suggestive 	  selling    
 7.  As a white label software can be customized by switching out APIs, and CSS elements for companies
     wishing to use this as a marketing, sales or service tool or to pair with their own foods, wines, beers, ect;
+8. Users pair ratings, short comments
+9. See popular pairings for a dish/recipe
+10. scan upc or qr code  for suggested pairings    

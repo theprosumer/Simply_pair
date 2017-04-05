@@ -1,4 +1,4 @@
-<<!--For each beer type in wines tables display a clickable div with -->
+<!--For each beer type in wines tables display a clickable div with -->
 <!--the type centered-->
 
 <!--Top Nav-->
@@ -11,14 +11,16 @@
 
 <!--Beer Category Pic-->
 <div class="categoryPic">
-	<img src="*">
+	<img src="images/beers.jpg" class="img-responsive"">
 </div>
 
-<!--List of Wines by Type-->
-<div class="container">
-	<!--<%= beer.type %>-->
-</div>
+<!--for each beer type render a div with a class of div-btn and that beertype--> 
+<% @beers.each do |beer| %>
+	<div class="div_btn">
+		<%=beer.beer_type %>
+	</div>	
+<% end %>			
 
 <!--Button to make another pairing-->
-<button id="pairAnother">Pair Another	
+<button id="pairAnother">Pair Another Beer	
 </button>

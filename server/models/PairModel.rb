@@ -1,5 +1,5 @@
-# class Pair < ActiveRecord::Base					# not sure if this is right and how to use it
-# 	has_and_belongs_to_many :beers
+# class WinePair < ActiveRecord::Base				
 # 	has_and_belongs_to_many :wines
+#   has_and_belongs
 
 # end	

@@ -4,6 +4,7 @@ class BeerController < ApplicationController
 # on click of any div it sends you to beer pairs page
 
 	get '/' do
+		@beers = Beer.all
 		erb :beers
 	end
 	

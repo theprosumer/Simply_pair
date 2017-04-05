@@ -1,4 +1,4 @@
 class Beer < ActiveRecord::Base
-	has_many :types
-	has_and_belongs_to_many :foods
+	has_many :beer_pairs
+	has_many :foods, through: :beer_pairs
 end	

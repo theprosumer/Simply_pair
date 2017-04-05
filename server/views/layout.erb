@@ -2,24 +2,31 @@
 <html>
 <head>
 	<title>Beer and Wine Pairings</title>
+	<meta charset="utf-8"/>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
 </head>
 
 <body>
-	<!--Centered Logo At Top of Each Page-->
-	<div><img src="">
-	</div>
+	<div class = "container-fluid">
+		<div class="col-md-12 bg-info">
+			<div class="row">
+				top nav area
+			</div>
+			<div class="row">
 
-	<div>
-
-		<%= yield %>
+				<%= yield %>
 	
-	</div>
+			</div>
+			<div class="row">
+				SimplyPair App ©2017	
+			</div>	
+		</div>
+	</div>			
 
-	<!--Centerd copyright at bottom of each page-->
-	<div>
-		<p>SimplyPair Food Pairing App ©2017</p>
-	</div>
 	<script src="scripts/app.js"></script>
 </body>
 </html>

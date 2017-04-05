@@ -3,6 +3,7 @@ class WineController < ApplicationController
 # for each wine type display wine type on a div 
 
 	get '/' do
+		@wines = Wine.all
 		erb :wines
 	end
 	

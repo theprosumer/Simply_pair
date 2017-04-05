@@ -15,10 +15,12 @@
 	<img src="*">
 </div>
 
-<!--List of Foods by Type-->
-<div id="container">
-	<%=food.type%>
-</div>
+<!--List of Foods by Type for each wine type render a div with a class of div-btn with a foodtype--> 
+<% @foods.each do |food| %>
+	<div class="div_btn">
+		<%= food.food_type %>
+	</div>	
+<% end %>
 
 <!--Button to make another pairing-->
 <button id="pairAnother">	

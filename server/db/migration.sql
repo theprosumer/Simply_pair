@@ -15,3 +15,7 @@ CREATE TABLE wines(id SERIAL PRIMARY KEY, type varchar(255));
 CREATE TABLE wine_pairs(id SERIAL PRIMARY KEY, wine_id INT references wines(id), food_id INT references foods(id));
 
 CREATE TABLE beer_pairs(id SERIAL PRIMARY KEY, beer_id INT references beers(id), food_id INT references foods(id));
+
+--CREATE TABLE wine_styles(id SERIAL PRIMARY KEY, style varchar(255));
+
+--CREATE TABLE berr_styles(id SERIAL PRIMARY KEY, style varchar(255));
