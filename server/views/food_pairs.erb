@@ -1,0 +1,24 @@
+<!-- since food can be paired with a wine or beer display both pairs on
+the same page. renders in 'foods/:id/pairs' view -->
+
+<div class="pairList" align="center">
+	<h4>You can pair these wines with <%= this.food %></h4>
+		<ul>
+			<% @this.food do |wine_pair| %>
+			<li>
+				<%=wine_pair.food_id %>
+			</li>			
+			<% end %>
+		</ul>		
+</div>
+<br>
+<div class="pairList" align="center">
+	<h4>Try pairing these beers with <%= this.food %></h4>
+		<ul>
+			<% @this.food do |beer_pair| %>
+			<li>
+				<%=beer_pair.food_id %>
+			</li>			
+			<% end %>
+		</ul>		
+</div>

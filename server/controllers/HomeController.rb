@@ -55,7 +55,7 @@ class HomeController < ApplicationController
 													# route for user to logout
 	get '/logout' do
 		session.destroy
-		redirect'/login'
+		redirect'/home/login'
 	end		
 
 end	
