@@ -1,4 +1,3 @@
 class Fav < ActiveRecord::Base
-	#belongs to :user
-
+	belongs to :user
 end	

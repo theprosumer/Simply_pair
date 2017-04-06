@@ -9,7 +9,7 @@
 
 <!--Display wine type and each associated wine pair-->
 <div id="typeTitle">
-	<h3><%=@wine.wine_type%></h3>			
+	<h4>Simple Pairs for <%=@wine.wine_type%></h$>			
 </div>
 <div>
 		<%@wine.winepairs.each do |winepair|%>
@@ -24,3 +24,5 @@
 <br>
 <a href="/wines"><button class="button btn-primary" id="pairAnother">Pair Another Wine	
 </button></a>
+<br><br>
+<a href="/home/logout">Logout</a>

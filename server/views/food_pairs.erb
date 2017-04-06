@@ -1,24 +1,37 @@
 <!-- since food can be paired with a wine or beer display both pairs on
 the same page. renders in 'foods/:id/pairs' view -->
 
-<div class="pairList" align="center">
-	<h4>You can pair these wines with <%= this.food %></h4>
-		<ul>
-			<% @this.food do |wine_pair| %>
-			<li>
-				<%=wine_pair.food_id %>
-			</li>			
-			<% end %>
-		</ul>		
+
+<div class="categoryPic">
+	<img src="/images/winescoll.jpg " class="img-responsive"/>
 </div>
+
+
+<!--Display wine type and each associated wine pair-->
+<div id="typeTitle">
+	<h4>Simple Wine Pairs for <%=@food.food_type%></h$>			
+</div>
+<div>
+		<%@food.winepairs.each do |winepair|%>
+		<li>
+			<%=winepair.wine.wine_type%>	
+		</li>
+		<%end%>
+</div>
+
+<div id="typeTitle">
+	<h4>Simple Beer Pairs</h$>			
+</div>
+<div>
+		<%@food.beerpairs.each do |beerpair|%>
+		<li>
+			<%=beerpair.beer.beer_type%>	
+		</li>
+		<%end%>
+</div>
+
+
+<!--Button to make another pairing-->
 <br>
-<div class="pairList" align="center">
-	<h4>Try pairing these beers with <%= this.food %></h4>
-		<ul>
-			<% @this.food do |beer_pair| %>
-			<li>
-				<%=beer_pair.food_id %>
-			</li>			
-			<% end %>
-		</ul>		
-</div>
+<a href="/foods"><button class="button btn-primary" id="pairAnother">Pair Another Food	
+</button></a>

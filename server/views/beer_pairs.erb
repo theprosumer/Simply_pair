@@ -6,8 +6,9 @@
 	<img src="/images/beers.jpg" class="img-responsive">
 </div>
 
+<!--Display beer type and each associated beer pair-->
 <div id="typeTitle">
-	<h3><%=@beer.beer_type%></h3>			
+	<h4>Simple Pairs for <%=@beer.beer_type%></h4>			
 </div>
 <div>
 		<%@beer.beerpairs.each do |beerpair|%>
@@ -19,5 +20,10 @@
 
 
 <!--Button to make another pairing-->
-<button id="pairAnother">	
-</button>
+<br>
+<a href="/beers">
+	<button class="button btn-primary" id="pairAnother"> Pair Another Beer	
+	</button>
+</a>
+<br><br>
+<a href="/home/logout">Logout</a>

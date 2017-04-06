@@ -4,6 +4,9 @@ body {
 h1 {
   font-family: 'Handlee', cursive;
 }
+ul {
+  list-style-type: none;
+}
 #register,
 #login {
   background-color: #d64b4b;

@@ -1,4 +1,4 @@
 class Beer < ActiveRecord::Base
 	has_many :beerpairs
-	has_many :foods, through: :beer_pairs
+	has_many :foods, through: :beerpairs
 end	

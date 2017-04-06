@@ -1,4 +1,4 @@
-# Simply_pair
+# Simply_pairs
 
 A RESTful Food/Drink Pairing App Made with Ruby, Sinatra, and Active Record
 
@@ -14,6 +14,9 @@ User wants a simple pairing solution to pair foods with wines and beers
 
 4. User can choose a type and is directed to a page that list the pairs of that go with that selection.
 
+Wireframes:
+View Wireframes at:
+file:///Users/JohnnyFavorite/Justinmind/7.8.0/work1/1893718668663507756/index.html#/screens/d12245cc-1680-458d-89dd-4f0d7fb22724
 
 Real World Future Dev Opportunities
 1.  Use A Wine API - to get real product details and pairings, and info

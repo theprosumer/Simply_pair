@@ -19,6 +19,7 @@ require './models/FoodModel'
 #require './models/FavModel'
 require './models/WinePairModel'
 require './models/BeerPairModel'
+require './models/FoodPairModel'
 #require './models/StyleModel'
 
 ### map/run Controllers

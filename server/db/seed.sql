@@ -354,7 +354,12 @@ INSERT INTO wine_styles (stlye) VALUES ('Late Harvest');
 
 INSERT INTO wine_styles (stlye) VALUES ('Ice Wine');
 
+-- user favorites seeds
+INSERT INTO favorites (fav_dish, fav_wine, fav_beer, user_id) VALUES ('Cajun Shrimp Alfredo', 'Barefoot Pink Moscato', 'Heiniken', 1);
 
+INSERT INTO favorites (fav_dish, fav_wine, fav_beer, user_id) VALUES ('Cheesburger w/Cripsy Creme Bun', 'Red Wine', 'Miller Lite', 1);
+
+INSERT INTO favorites (fav_dish, fav_wine, fav_beer, user_id) VALUES ('Caesar Salad w/Roasted Chicken', 'Kendall Jackson White', 'Coors Lite', 1);
 
 
 
