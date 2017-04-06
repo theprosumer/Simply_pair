@@ -3,17 +3,22 @@
 	<img src="images/Wine-Cheese.png" class="img-responsive" alt="wine and cheese"/>
 
 	<!--App Name and Subtitle-->
-	<h1 id="AppName"><span>Simply</span><span>Pair</span></h1>
+	<!-- <h1 id="AppName"><span>Simply</span><span>Pair</span></h1> -->
 	<p>Food and Drink Pairing Made Simple</p>
 
 
 	<!--Login Form Inside A container-->
 	<p>Welcome! Please Log in</p>	
-	<div id="login">
+	<div class="login bg-danger" align="center">
 		<form action="/home/login" method="POST">
+			<br>
+			<label>Username:</label>
 			<input type="username" name="username" placeholder="Username">
+			<br><br>
+			<label>Password:</label>
 			<input type="password" name="password" placeholder="Password">
-			<button>Login</button> 
+			<br><br>
+			<button type="button" class="btn btn-primary">Login</button> 
 		</form>
 	</div>
 

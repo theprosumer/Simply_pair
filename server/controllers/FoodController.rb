@@ -3,7 +3,7 @@ class FoodController < ApplicationController
 # loop though each food type and render each food type on a div on click 
 # sends to pairs page and shows wines or beers that pair with that food type
 
-	get '/foods' do
+	get '/' do
 		@foods = Food.all
 		erb :foods	
 	end

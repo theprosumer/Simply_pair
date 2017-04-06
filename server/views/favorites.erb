@@ -17,6 +17,16 @@ Your Favorite Pairings
 <% end %>
 </ul>
 
+<!-- form to add new favorites to user list -->
+<div class="add_favs col-md-8">
+	<form action="/favorites" method="POST">
+		<input type="text" name="fav_food" placeholder="Favorite Dish" />
+		<input type="text" name="fav_wine" placeholder="Wine Pair" />
+		<input type="text" name="fav_beer" placeholder="Beer Pair" />
+		<button>Save</button>
+	</form>
+</div>	
+
 <!--Button to make another pairing-->
 <button id="pairAnother">	
 </button>

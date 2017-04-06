@@ -4,10 +4,9 @@ class PairController < ApplicationController
 # if a wine type was selcted render wine page
 
 	get '/' do
-		erb :wine_pairs
+	end	
 
-		erb :beer_pairs
-	end
+
 	
 
 end	

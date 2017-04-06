@@ -3,17 +3,25 @@
 	<img src="images/Wine-Cheese.png" class="img-responsive" alt="wine and cheese"/>
 
 	<!--App Name and Subtitle-->
-	<h1 id="AppName"><span>Simply</span><span>Pair</span></h1>
 	<p>Food and Drink Pairing Made Simple</p>
 
 
-	<!--Login Form Inside A container-->
-<p>Welcome Please Register</p><%=@message%>
-<form action="/home/register" method="POST">
-	<input type="username" name="username" placeholder="Username">
-	<input type="password" name="password" placeholder="Password">
-	<button>JOIN!</button> 
-</form>
+	<!--Registration Form Inside A container-->
+<p>Welcome! Please Register</p><%=@message%>
+<div class="login bg-info" align="center">
+	<div id="register">
+		<form action="/home/register" method="POST">
+			<br>
+			<label>Username:</label>
+			<input type="username" name="username" placeholder="username">
+			<br><br>
+			<label>Password:</label>
+			<input type="password" name="password" placeholder="password">
+			<br><br>
+			<button type="button" class="btn btn-primary">JOIN!</button> 
+		</form>
+	</div>
+</div>
 <p>Already a Member? <a href="/home/login">Log In</a></p>
 
 <!--Message as a block element displays on failed login-->

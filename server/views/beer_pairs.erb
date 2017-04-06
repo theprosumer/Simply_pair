@@ -3,10 +3,7 @@
 
 <!--Top Nav-->
 <div id="topNav">
-	<ul>
-		<li href="/home">Home</li>
-		<li href="/logout">Logout</li>
-	</ul>
+	<p><a href="/home"> Home </a><a href="/logut">Logut</a></p>/li>
 </div>
 
 <!--General Beer Pic-->
@@ -14,9 +11,9 @@
 	<img src="*">
 </div>
 
-<!--A Subheading of the selected wine type-->
+<!--A Subheading of the selected beer type-->
 <div id="typeTitle">
-	<h3><%=beer.type.target%></h3>>
+	<h3><%=beer.beer_type.id%></h3>>
 </div>
 
 <!--
@@ -27,9 +24,11 @@
 </div> -->
 
 <!--Food Type with List of Wines or Beers by Type-->
-<div class="container">
-	<%=food.type%> Pairs With <%=pairs_with%> 
-</div>
+<<% @beer_pairs.each do |beer_pairs| %>
+	<div class="div_btn">
+		<%=beer.beer_pairs %>
+	</div>	
+<% end %>>
 
 <!--Button to make another pairing-->
 <button id="pairAnother">	

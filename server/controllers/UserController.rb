@@ -6,8 +6,12 @@ class UserController < ApplicationController
 	# get '/favs' do
 	# 	erb :favorites
 	# end
+	get '/' do
+		@user = User.all
+	end	
 	
-	get '/:id' do
+	get '/user:id' do
+		@user = User.find(id)
 	end
 
 	post '/' do

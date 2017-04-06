@@ -8,6 +8,11 @@ class BeerController < ApplicationController
 		erb :beers
 	end
 	
+	get '/pairs' do
+		@beer_pairs = Beer_pairs.all
+		erb :beer_pairs	
+	end
+		
 	get '/:id' do
 		
 	end
