@@ -7,8 +7,10 @@ class WineController < ApplicationController
 		erb :wines
 	end
 	
-	get '/pairs' do
-		@wine_pairs = Wine_pairs.all
+	get '/pairs/:id' do
+		id = params[:id]
+		@wine = Wine.find(id)
+
 		erb :wine_pairs
 	end
 		

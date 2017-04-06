@@ -13,11 +13,11 @@
 <h4>Choose a beer to pair...</h4>
 <!--for each beer type render a div with a class of div-btn and that beertype--> 
 <% @beers.each do |beer| %>
-	<button class="div_btn col-md-12">
+	<a href="beers/pairs/<%=beer.id%>"><div class="div_btn col-md-4">
 		<%=beer.beer_type %>
-	</button>		
+	</div></a>		
 <% end %>			
 
 <!--Button to make another pairing-->
-<button id="pairAnother">Pair Another Beer	
-</button>
+<a href="/foods"><button class="button btn-primary" id="pairAnother">Pair Another Food	
+</button></a>

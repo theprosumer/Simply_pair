@@ -8,16 +8,16 @@
 
 <!--Wine Category Pic-->
 <div class="categoryPic">
-	<img src="images/wines.jpg" class="img-responsive">
+	<img src="images/wines.jpg" class="img-responsive"/>
 </div>
 
 <!--List of Wines by Type for each wine type render a div with a class of div-btn with a winetype--> 
 <h4>Choose A Wine to Pair...</h4>
 	<% @wines.each do |wine| %>
-		<button class="col-md-4 div_btn">
+		<a href="/wines/pairs/<%=wine.id%>"> <div class="col-md-4 div_btn">
 			<%= wine.wine_type %>
-		</button>	
+		</div></a>	
 	<% end %>	
 <!--Button to make another pairing-->
-<button id="pairAnother"> Pair Another Wine	
-</button>
+<a href="/foods"><button class="button btn-primary" id="pairAnother"> Pair Another Food	
+</button></a>

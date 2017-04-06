@@ -6,7 +6,4 @@ class PairController < ApplicationController
 	get '/' do
 	end	
 
-
-	
-
 end	

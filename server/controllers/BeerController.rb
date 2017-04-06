@@ -19,9 +19,6 @@ class BeerController < ApplicationController
 		id = params[:id]
 		@food = Food.find(id)
 		@beer_pairs
-
-		
-
 		
 	end
 
