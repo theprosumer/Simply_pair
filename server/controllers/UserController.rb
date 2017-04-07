@@ -9,7 +9,7 @@ class UserController < ApplicationController
 	# 	erb :favorites
 	# end	
 	
-	get 'user/favorites/:id' do
+	get '/favorites/:id' do
 		id = params[:id]
 		@user = User.find(id)
 		erb :favorites
