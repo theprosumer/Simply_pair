@@ -26,13 +26,14 @@ To save more favorites, enter below.
 	</form>
 </div>	
 
+<!--loop through each user favorite pair and list each pairing-->
 <ul>
-<% @favorites.user.each do |favs| %>				<!--loop through each user favorite pair-->
-	<li><%= favs.pair %></li>						<!--list each pairing-->
+<% @favorites.user.each do |favorites| %>				
+	<li><%= favorites.fav_dish %>, <%= favorites.fav_wine %>, <%= favorites.fav_beer %></li>
 <% end %>
 </ul>
 
-<!--Button to make another pairing-->
+<!--Buttons to make another pairing-->
 <br><br>
 <div>
 	<a href="/wines">
