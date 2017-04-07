@@ -2,33 +2,48 @@
 
 <!--Top Nav-->
 <div id="topNav">
-	<ul>
-		<li href="/home">Home</li>
-		<li href="/logout">Logout</li>
-	</ul>
+		<a href="/home"><p>Home</p></a>
 </div>
 
 <!--List of Wines by Type-->
-Welcome <%= @user.username %> 
-Your Favorite Pairings
+<div>
+<p>Hi <%= @user.username %>, 
+here are Your FAVORITE pairings...
+To save more favorites, enter below.
+</div>
+
+<!-- form to add new favorites to user list -->
+<div class="add_favs col-md-12 bg-warning">
+	<form action="/favorites" method="POST"><br><br>
+		<label>Favorite Dish:</label>
+		<input type="text" name="fav_food" placeholder="Your Favorite Dish" />
+		<label>Your Wine Pair:</label>
+		<input type="text" name="fav_wine" placeholder="Your Wine Pair" />
+		<label>Your Beer Pair:</label>
+		<input type="text" name="fav_beer" placeholder="Your Beer Pair" />
+		<br><br>
+		<button class="button btn-success">Save</button>
+	</form>
+</div>	
+
 <ul>
-<% @user.favorites.each do |favs| %>				<!--loop through each user favorite pair-->
+<% @favorites.user.each do |favs| %>				<!--loop through each user favorite pair-->
 	<li><%= favs.pair %></li>						<!--list each pairing-->
 <% end %>
 </ul>
 
-<!-- form to add new favorites to user list -->
-<div class="add_favs col-md-8">
-	<form action="/favorites" method="POST">
-		<input type="text" name="fav_food" placeholder="Favorite Dish" />
-		<input type="text" name="fav_wine" placeholder="Wine Pair" />
-		<input type="text" name="fav_beer" placeholder="Beer Pair" />
-		<button>Save</button>
-	</form>
-</div>	
-
 <!--Button to make another pairing-->
-<button id="pairAnother">	
-</button>
+<br><br>
+<div>
+	<a href="/wines">
+		<button class="button btn-warning" id="pairAnother">Pair by Wine	
+		</button>
+	</a>	
+	<br><br>
+	<a href="/beers">
+		<button class="button btn-danger">Pair by Beer		
+		</button>
+	</a>
+</div>	
 <br><br>
 <a href="/home/logout">Logout</a>
