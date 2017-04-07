@@ -25,7 +25,7 @@ file:///Users/JohnnyFavorite/Justinmind/7.8.0/work1/1893718668663507756/index.ht
 
 Screen Shots:
 
-![beers page](/screenshots/beers-shot.jpg?raw=true "beers view")
+![beers page](/beers-shot.jpg?raw=true "beers view")
 ![favorites page](/screenshots/favorites-shot.jpg?raw=true "favorites view")
 ![foods page](/screenshots/foods-shot.jpg?raw=true "foods view")
 ![home page](/screenshots/home-shot.jpg?raw=true "home view")
