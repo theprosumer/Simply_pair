@@ -1,21 +1,24 @@
 class UserController < ApplicationController
 
 	get '/' do
+	end	
+
+	get '/favorites' do
 		erb :favorites
 	end
 
-	# get '/user' do
-	# 	@user = User.all
-	# 	erb :favorites
-	# end	
+	get '/user' do
+		@user = User.all
+	end	
 	
 	get '/favorites/:id' do
 		id = params[:id]
 		@user = User.find(id)
+		@favorite = Favorite.find(id)
 		erb :favorites
 	end
 
-	post 'user/favorites' do
+	post '/favorites' do
 		my_fav = JSON.parse(request.body.read)
 		@favorite = Favorite.new
 		@favorite.dish = my_fav["fav_dish"]
@@ -28,7 +31,7 @@ class UserController < ApplicationController
 		erb :add_fav
 	end
 
-	patch 'user/favorites/:id' do
+	patch '/favorites/:id' do
 		id = params[:id]
 
 		@user = User.find(id)
@@ -44,7 +47,7 @@ class UserController < ApplicationController
 		erb :favorites
 	end
 
-	delete 'user/favorites/:id' do
+	delete '/favorites/:id' do
 		id = params[:id]
 
 		@user = User.find(id)
