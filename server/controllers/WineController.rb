@@ -1,6 +1,6 @@
 class WineController < ApplicationController
 
-
+	require 'httparty'
 # for each wine type display wine type on a div 
 
 	get '/' do
@@ -14,16 +14,16 @@ class WineController < ApplicationController
 
 		erb :wine_pairs
 	end
-	
-	get '/varietals' do
+
+	get '/varietals' do 
 		@varietals = Varietal.all
 		erb :varietals
-	end	
+	end
 
 	get '/varietals/:id' do
 		id = params[:id]
 		@varietal = Varietal.find(id)
 		erb :varietals
 	end
-
+	
 end	

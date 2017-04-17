@@ -9,20 +9,22 @@
 <!--Food Desc and Category Pic-->
 <div class="heading"></div>
 <div>
-	<img src="/images/foodbites.jpg">
+	<img src="/images/foodbites.jpg" align="center">
 </div>
 <h4>Choose A Food to Pair...</h4>
 <!--List of Foods by Type for each wine type render a div with a class of div-btn with a foodtype--> 
-<% @foods.each do |food| %>
-	<div class="well col-md-4">
-		<a href="/foods/pairs/<%=food.id%>">
-				<%= food.food_type %>
-		</a>
-	</div>			
-<% end %>
+<div>
+	<% @foods.each do |food| %>
+		<div class="well col-md-4" align="center">
+			<a href="/foods/pairs/<%=food.id%>">
+					<%= food.food_type %>
+			</a>
+		</div>			
+	<% end %>
+</div>
 
 <!--Button to make another pairing-->
-<br>
+<div><br>
 	<a href="/wines">
 		<button class="button btn-primary" >Pair by Wine
 		</button>
@@ -31,6 +33,7 @@
 		<button class="button btn-warning" >Pair by Beer
 		</button>
 	</a>
+	<br>
+
+	<a href="/home/logout">  Logout</a>	
 </div>
-<br>
-<a href="/home/logout">  Logout</a>	

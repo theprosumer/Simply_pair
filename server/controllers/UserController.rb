@@ -19,6 +19,7 @@ class UserController < ApplicationController
 		erb :favorites
 	end
 
+
 	post '/favorites' do
 		my_fav = JSON.parse(request.body.read)
 		@favorite = Favorite.new

@@ -3,5 +3,7 @@ class Wine < ActiveRecord::Base
 	#belongs_to :wine
 
 	has_many :winepairs
+	has_many :winevarietals
 	has_many :foods, through: :winepairs
+	has_many :wines, through: :winevarietals
 end			

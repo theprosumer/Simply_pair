@@ -280,79 +280,83 @@ INSERT INTO beer_pairs (beer_id, food_id) VALUES (22, 3);
 
 INSERT INTO beer_pairs (beer_id, food_id) VALUES (22, 4);
 
---wine style seeds
+--wine varietal_name seeds
 
-INSERT INTO wine_styles (stlye) VALUES ('White Table Wine');
+INSERT INTO varietals (varietal_name) VALUES ('White Table Wine');
 
-INSERT INTO wine_styles (stlye) VALUES ('Sauvignon Blanc');
+INSERT INTO varietals (varietal_name) VALUES ('Sauvignon Blanc');
 
-INSERT INTO wine_styles (stlye) VALUES ('Grunet Velliner');
+INSERT INTO varietals (varietal_name) VALUES ('Grunet Velliner');
 
-INSERT INTO wine_styles (stlye) VALUES ('Pinot Grigio');
+INSERT INTO varietals (varietal_name) VALUES ('Pinot Grigio');
 
-INSERT INTO wine_styles (stlye) VALUES ('Albarino');
+INSERT INTO varietals (varietal_name) VALUES ('Albarino');
 
-INSERT INTO wine_styles (stlye) VALUES ('Riesling');
+INSERT INTO varietals (varietal_name) VALUES ('Riesling');
 
-INSERT INTO wine_styles (stlye) VALUES ('Moscato');
+INSERT INTO varietals (varietal_name) VALUES ('Moscato');
 
-INSERT INTO wine_styles (stlye) VALUES ('Maldavia');
+INSERT INTO varietals (varietal_name) VALUES ('Maldavia');
 
-INSERT INTO wine_styles (stlye) VALUES ('Muler-Thurgau');
+INSERT INTO varietals (varietal_name) VALUES ('Muler-Thurgau');
 
-INSERT INTO wine_styles (stlye) VALUES ('Gewurtzaminer');
+INSERT INTO varietals (varietal_name) VALUES ('Gewurtzaminer');
 
-INSERT INTO wine_styles (stlye) VALUES ('Chardonnay');
+INSERT INTO varietals (varietal_name) VALUES ('Chardonnay');
 
-INSERT INTO wine_styles (stlye) VALUES ('Rousanne');
+INSERT INTO varietals (varietal_name) VALUES ('Rousanne');
 
-INSERT INTO wine_styles (stlye) VALUES ('Marsanne');
+INSERT INTO varietals (varietal_name) VALUES ('Marsanne');
 
-INSERT INTO wine_styles (stlye) VALUES ('Viognier');
+INSERT INTO varietals (varietal_name) VALUES ('Viognier');
 
-INSERT INTO wine_styles (stlye) VALUES ('Sparkling Wine');
+INSERT INTO varietals (varietal_name) VALUES ('Sparkling Wine');
 
-INSERT INTO wine_styles (stlye) VALUES ('Champagne');
+INSERT INTO varietals (varietal_name) VALUES ('Champagne');
 
-INSERT INTO wine_styles (stlye) VALUES ('Prosecco');
+INSERT INTO varietals (varietal_name) VALUES ('Prosecco');
 
-INSERT INTO wine_styles (stlye) VALUES ('Cava');
+INSERT INTO varietals (varietal_name) VALUES ('Cava');
 
-INSERT INTO wine_styles (stlye) VALUES ('St. Laurent');
+INSERT INTO varietals (varietal_name) VALUES ('St. Laurent');
 
-INSERT INTO wine_styles (stlye) VALUES ('Gamay');
+INSERT INTO varietals (varietal_name) VALUES ('Gamay');
 
-INSERT INTO wine_styles (stlye) VALUES ('Pinot Noit');
+INSERT INTO varietals (varietal_name) VALUES ('Pinot Noir');
 
-INSERT INTO wine_styles (stlye) VALUES ('Zweigelt');
+INSERT INTO varietals (varietal_name) VALUES ('Zweigelt');
 
-INSERT INTO wine_styles (stlye) VALUES ('Tempranillo');
+INSERT INTO varietals (varietal_name) VALUES ('Red Table Wine');
 
-INSERT INTO wine_styles (stlye) VALUES ('Zinfandel');
+INSERT INTO varietals (varietal_name) VALUES ('Tempranillo');
 
-INSERT INTO wine_styles (stlye) VALUES ('Grenache');
+INSERT INTO varietals (varietal_name) VALUES ('Zinfandel');
 
-INSERT INTO wine_styles (stlye) VALUES ('Merlot');
+INSERT INTO varietals (varietal_name) VALUES ('Grenache');
 
-INSERT INTO wine_styles (stlye) VALUES ('Sangivese');
+INSERT INTO varietals (varietal_name) VALUES ('Merlot');
 
-INSERT INTO wine_styles (stlye) VALUES ('Malbec');
+INSERT INTO varietals (varietal_name) VALUES ('Sanglovese');
 
-INSERT INTO wine_styles (stlye) VALUES ('Algianico');
+INSERT INTO varietals (varietal_name) VALUES ('Malbec');
 
-INSERT INTO wine_styles (stlye) VALUES ('Cabernet Sauvignon');
+INSERT INTO varietals (varietal_name) VALUES ('Algianico');
 
-INSERT INTO wine_styles (stlye) VALUES ('Syrah');
+INSERT INTO varietals (varietal_name) VALUES ('Cabernet Sauvignon');
 
-INSERT INTO wine_styles (stlye) VALUES ('Monastrell');
+INSERT INTO varietals (varietal_name) VALUES ('Syrah');
 
-INSERT INTO wine_styles (stlye) VALUES ('Port');
+INSERT INTO varietals (varietal_name) VALUES ('Monastrell');
 
-INSERT INTO wine_styles (stlye) VALUES ('Sherry');
+INSERT INTO varietals (varietal_name) VALUES ('Port');
 
-INSERT INTO wine_styles (stlye) VALUES ('Late Harvest');
+INSERT INTO varietals (varietal_name) VALUES ('Sherry');
 
-INSERT INTO wine_styles (stlye) VALUES ('Ice Wine');
+INSERT INTO varietals (varietal_name) VALUES ('Late Harvest');
+
+INSERT INTO varietals (varietal_name) VALUES ('Ice Wine');
+
+
 
 -- user favorites seeds
 INSERT INTO favorites (fav_dish, fav_wine, fav_beer, user_id) VALUES ('Cajun Shrimp Alfredo', 'Barefoot Pink Moscato', 'Heiniken', 1);
@@ -361,10 +365,51 @@ INSERT INTO favorites (fav_dish, fav_wine, fav_beer, user_id) VALUES ('Cheesburg
 
 INSERT INTO favorites (fav_dish, fav_wine, fav_beer, user_id) VALUES ('Caesar Salad w/Roasted Chicken', 'Kendall Jackson White', 'Coors Lite', 1);
 
+-- wine_varietal seeds
 
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (1, 1);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (1, 2);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (1, 3);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (1, 4);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (1, 5);
 
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (2, 6);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (2, 7);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (2, 8);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (2, 9);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (2, 10);
 
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (3, 11);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (3, 12);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (3, 13);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (3, 14);
 
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (4, 15);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (4, 16);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (4, 17);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (4, 18);
 
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (5, 19);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (5, 20);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (5, 21);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (5, 22);
+
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (6, 23);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (6, 24);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (6, 25);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (6, 26);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (6, 27);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (6, 28);
+
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (7, 29);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (7, 30);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (7, 31);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (7, 32);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (7, 33);
+
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (8, 34);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (8, 35);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (8, 36);
+INSERT INTO wine_varietals (wine_id, varietal_id) VALUES (8, 37);
 
 

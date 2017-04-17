@@ -1,53 +1,21 @@
 <!--For the whine style clicked on the wine pairs page, display a page showing the
 varietal naeme, a short description of the varietal and a list of varietal types by name
 This informaion-->
-<div class="mainContainer">
 
-	<div class="nav navbar-inverse"> <!--style with bootstrap-->
-		<div class="leftNav">
-			<a href="/home"> Home</a>
-		</div>
-		<div class="rightNav">
-			<a href="/logout"> Logout</a>
-		</div>
-	</div>
+<h6>Wine Varietals</h6>
 
-
-	<div class="categoryImg">
-		<img src="*"/>
-	</div>
-
-
-	<div class="varietalInfo">
-		<h3><%=Wine.wine_type%></h3>
-		<p class="verietalInfo">
-			Pairs with .....
-		</p>	
-	</div>	
-
+<div>
 	<div>
-		<% @Varietal.name do |varietal| %>
-		<div class="divBtn">
-			<%= varietal%>
-			<% end %>
-		</div>	
+		<% @varietals.each do |varietal| %>
+			<div class="well col-md-4">
+				
+					<%= varietal.varietal_name %>
+				
+			</div>			
+		<% end %>			
 	</div>
-		
+</div>	
 
-	<div class="navbar ">
-		<div class="leftNav">
-			Pair Wines
-		</div>
-		<div class="centerNav">
-			MyPairs &hearts
-		</div>
-		<div class="rightNav">
-			Pair Beers	
-		</div>
-	</div>
-
-</div>
-
-
+<!-- github.com/bkeepers.env -->
 
 

@@ -1,4 +1,7 @@
- ### Require Sinatra
+require 'dotenv/load'
+Dotenv.load('box.env')
+
+### Require Sinatra
 require 'sinatra/base'
 
 ### Require Controllers
@@ -16,6 +19,7 @@ require './models/UserModel'
 require './models/WineModel'
 require './models/BeerModel'
 require './models/FoodModel'
+require './models/VarietalModel'
 require './models/FavoriteModel'
 require './models/WinePairModel'
 require './models/BeerPairModel'

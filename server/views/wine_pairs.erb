@@ -24,9 +24,9 @@
 </div>
 
 <!--option to see varietals for this wine type-->
-<div class="well bg-warning">
-	See/Shop for Varietals of <%=@wine.wine_type%>
-</div>
+<a href="/wines/pairs/:id/varietals"><div class="alert alert-warning">
+	See Varietals of <%=@wine.wine_type%>
+</div></a>
 
 <!--Button to make another pairing-->
 <br>
