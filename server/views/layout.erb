@@ -1,36 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Beer and Wine Pairings</title>
+	<title>Simply Pair Wine Pairing App</title>
 	<meta charset="utf-8"/>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-
+	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
 </head>
-
 <body>
-	<div id="p" class="container-fluid">
-		<div class="col-md-12 height-full bg-faded" align="center"  id="mainContainer">
-			<img src="/images/simplypair_logo_sm.png"/>
-			<div class="row">
-				
+<div class="container-fluid">
+	<div class="col-md-12 height-full" align="center">
+		<!--Logo Area-->
+		<div class="row logoArea">
+			<div class="navBar">
+				<img src="/images/simplypair_logo_sm.png"/>
 			</div>
-			<div class="row">
+		</div>
 
-				<%= yield %>
-	
+		<!--Top Navigation Bar-->
+		<div class="row navbar navbar bg-danger">
+			<div class="top-bar" data-topbar role="navigation">
+				<button type="button" class="btn btn-default navbar-btn navbar-left glyphicon glyphicon-user">Login</button>
+				<button type="button" class="btn btn-default navbar-btn navbar-right glyphicon glyphicon-off">Logout</button>
+			</div>
+		</div>
+
+		<!--Render Area-->
+			<div class="row">
+				<div class="container" align="center">
+
+					<%= yield %>
+
+				</div>
 			</div>	
+
+		<!--Bottom Navigation Bar-->
+		<div class="row navbar navbar bg-danger">
+			<div class="navBar">
+				<div class="leftNav"></div>
+				<div class="ctrNav"></div>
+				<div class="rightNav"></div>
+			</div>
+		</div>
+
+		<!--Copyright & Info-->
+		<div class="row info">
+			<div class="container medium-12 column">
+				<p>SimplyPair Wine Pairing App ©2017</p>
+				<p>Powered by <a href="http://www.wine.com/" title="Wine.com the destination for Wine and Wine Gifts"><img src="http://cache.wine.com/images/logos/80x20_winecom_logo.png" alt="Wine.com the destination for Wine and Wine Gifts" /></a></p>
+			</div>
 		</div>
 	</div>
-	<br>	
-	<div class="row" align="center">
-		SimplyPair App ©2017	
-	</div>		
+</div>	
 
-	<script src="scripts/app.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-	</script>
+<script src="scripts/app.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script>
 </body>
 </html>

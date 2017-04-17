@@ -1,8 +1,10 @@
-body {
-  background-image: url('/images/cheesepairing.jpg');
-}
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Handlee', cursive;
+  color: #F2DEDE !important;
 }
 ul {
   list-style-type: none;
@@ -15,7 +17,8 @@ ul {
 }
 .div_btn {
   background-color: grey;
-  width: 100px;
+  width: 300px;
+  height: 50px;
 }
 .height-full {
   min-height: 100%;
@@ -23,4 +26,9 @@ ul {
 }
 #login {
   background-color: black;
+}
+.navbar-default {
+  background-color: teal;
+  background-image: none;
+  background-repeat: no-repeat;
 }

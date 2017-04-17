@@ -8,12 +8,6 @@ class BeerController < ApplicationController
 		erb :beers
 	end
 	
-	# route to show all beer pairs in db 
-	# get '/pairs' do
-	# 	@beer_pairs = Beer_pairs.all
-	# 	erb :beer_pairs	
-	# end
-		
 	# route to 'beer/:id/pairs' to show all beer pairs for each id
 	get '/pairs/:id' do
 		id = params[:id]

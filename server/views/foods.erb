@@ -14,11 +14,11 @@
 <h4>Choose A Food to Pair...</h4>
 <!--List of Foods by Type for each wine type render a div with a class of div-btn with a foodtype--> 
 <% @foods.each do |food| %>
+	<div class="well col-md-4">
 		<a href="/foods/pairs/<%=food.id%>">
-			<div class="div_btn col-md-4">
 				<%= food.food_type %>
-			</div>
-		</a>		
+		</a>
+	</div>			
 <% end %>
 
 <!--Button to make another pairing-->

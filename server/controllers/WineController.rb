@@ -1,5 +1,6 @@
 class WineController < ApplicationController
 
+
 # for each wine type display wine type on a div 
 
 	get '/' do
@@ -13,17 +14,16 @@ class WineController < ApplicationController
 
 		erb :wine_pairs
 	end
-		
-	get '/:id' do
-	end
+	
+	get '/varietals' do
+		@varietals = Varietal.all
+		erb :varietals
+	end	
 
-	post '/' do
-	end
-
-	patch '/:id' do
-	end
-
-	delete '/:id' do
+	get '/varietals/:id' do
+		id = params[:id]
+		@varietal = Varietal.find(id)
+		erb :varietals
 	end
 
 end	

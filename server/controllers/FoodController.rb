@@ -8,14 +8,6 @@ class FoodController < ApplicationController
 		erb :foods	
 	end
 
-	# route to show all food pairs 'foods/pairs'
-	# data comes from wine_pairs table and food_pairs table
-	# get '/pairs' do
-	# 	@food_pairs = Food_pairs.all
-	# 	erb :food_pairs	
-	# end	 
-
-
 	# route to 'foods/:id/pairs' to display all food pairs by id
 	# in the case of food, I want to show wine and beer pairs on the same page 
 	get '/pairs/:id' do

@@ -1,6 +1,8 @@
 <!--Display pairings of food with wines or food with beers depending-->
 <!--on whic type was clicked-->
-
+<div id="topNav">
+	<p><a href="/home">Home</a></p>
+</div>
 <!--General Beer Pic-->
 <div class="categoryPic">
 	<img src="/images/beers.jpg" class="img-responsive">
@@ -12,9 +14,9 @@
 </div>
 <div>
 		<%@beer.beerpairs.each do |beerpair|%>
-		<li>
+		<div class="well">
 			<%=beerpair.food.food_type%>	
-		</li>
+		</div>
 		<%end%>
 </div>
 
@@ -23,7 +25,12 @@
 <br>
 <a href="/beers">
 	<button class="button btn-primary" id="pairAnother"> Pair Another Beer	
-	</button>
+	</button><br><br>
+	<a href="/foods"><button class="button btn-primary" id="pairAnother">Pair by Food	
+</button></a>
+<br><br>
+<a href="/wines"><button class="button btn-danger" id="pairAnother">Pair by Wine	
+</button></a>
 </a>
 <br><br>
 <a href="/home/logout">Logout</a>

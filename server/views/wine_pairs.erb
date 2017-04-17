@@ -1,7 +1,9 @@
 <!--Display pairings of food with wines or food with beers depending-->
 <!--on which type was clicked-->
 
-
+<div id="topNav">
+	<p><a href="/home">Home</a></p>
+</div>
 <div class="categoryPic">
 	<img src="/images/wines.jpg " class="img-responsive"/>
 </div>
@@ -9,16 +11,22 @@
 
 <!--Display wine type and each associated wine pair-->
 <div id="typeTitle">
-	<h4>Simple Pairs for <%=@wine.wine_type%></h$>			
+	<h4>Simple Pairs for <%=@wine.wine_type%></h4>			
 </div>
+
+<!--Display each food Pair-->
 <div>
 		<%@wine.winepairs.each do |winepair|%>
-		<li>
+		<div class="well col-4-md">
 			<%=winepair.food.food_type%>	
-		</li>
+		</div>
 		<%end%>
 </div>
 
+<!--option to see varietals for this wine type-->
+<div class="well bg-warning">
+	See/Shop for Varietals of <%=@wine.wine_type%>
+</div>
 
 <!--Button to make another pairing-->
 <br>

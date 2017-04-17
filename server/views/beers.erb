@@ -10,21 +10,25 @@
 <div class="categoryPic">
 	<img src="/images/beers.jpg" class="img-responsive"">
 </div>
-<h4>Choose a beer to pair...</h4>
-<!--for each beer type render a div with a class of div-btn and that beertype--> 
-<% @beers.each do |beer| %>
-	<a href="beers/pairs/<%=beer.id%>">
-		<div class="div_btn col-md-4">
-			<%=beer.beer_type %>
-		</div>
-	</a>		
-<% end %>			
 
-<!--Button to make another pairing-->
-<a href="/foods"><button class="button btn-primary" id="pairAnother">Pair by Food	
-</button></a>
-<br><br>
-<a href="/wines"><button class="button btn-danger" id="pairAnother">Pair by Wine	
-</button></a>
-<br>
-<a href="/home/logout"> Logout</a>
+<h4>Choose a beer to pair...</h4>
+	<!--for each beer type render a div with a class of div-btn and that beertype--> 
+<div>
+	<% @beers.each do |beer| %>
+		<div class="well col-md-4">
+			<a href="beers/pairs/<%=beer.id%>">
+				<%=beer.beer_type %>
+			</a>
+		</div>			
+	<% end %>			
+</div>
+<!--Buttons to make another pairing-->
+<div>
+	<a href="/foods"><button class="button btn-primary" id="pairAnother">Pair by Food	
+	</button></a>
+	<br><br>
+	<a href="/wines"><button class="button btn-danger" id="pairAnother">Pair by Wine	
+	</button></a>
+	<br>
+	<a href="/home/logout"> Logout</a>
+</div>

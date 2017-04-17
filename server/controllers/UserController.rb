@@ -1,6 +1,7 @@
 class UserController < ApplicationController
 
 	get '/' do
+		erb :favorites
 	end	
 
 	get '/favorites' do
@@ -13,8 +14,8 @@ class UserController < ApplicationController
 	
 	get '/favorites/:id' do
 		id = params[:id]
-		@user = User.find(id)
 		@favorite = Favorite.find(id)
+		@user = User.find(id)
 		erb :favorites
 	end
 
