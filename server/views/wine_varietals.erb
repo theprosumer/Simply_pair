@@ -1,0 +1,11 @@
+ <!-- display List of wine varietals based on click of wine type -->
+<div >
+	<h4>Wine Varietals for <%=@wine.wine_type%></h4>			
+</div>
+<div>
+		<%@wine.winevarietals.each do |varietal|%>
+		<div class="well col-md-4" >
+			<%=varietal.wine.wine_type%>	
+		</div>
+		<%end%>
+</div>

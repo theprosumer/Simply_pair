@@ -16,12 +16,7 @@ CREATE TABLE wine_pairs(id SERIAL PRIMARY KEY, wine_id INT references wines(id),
 
 CREATE TABLE beer_pairs(id SERIAL PRIMARY KEY, beer_id INT references beers(id), food_id INT references foods(id));
 
---CREATE TABLE favorites(id SERIAL PRIMARY KEY, fav_dish varchar(255), fav_wine varchar(255), fav_beer varchar(255), user_id INT references users(id)); 
-
 CREATE TABLE varietals(id SERIAL PRIMARY KEY, varietal_name varchar(255));
 
 CREATE TABLE wine_varietals(id SERIAL PRIMARY KEY, wine_id INT references wines(id), varietal_id INT references varietals(id));
 
---CREATE TABLE wine_styles(id SERIAL PRIMARY KEY, style varchar(255));
-
---CREATE TABLE beer_styles(id SERIAL PRIMARY KEY, style varchar(255));

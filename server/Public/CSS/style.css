@@ -2,9 +2,10 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-family: 'Handlee', cursive;
-  color: #F2DEDE !important;
+  color: #e55252 !important;
 }
 ul {
   list-style-type: none;

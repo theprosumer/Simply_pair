@@ -22,8 +22,16 @@ class WineController < ApplicationController
 
 	get '/varietals/:id' do
 		id = params[:id]
+		@wine = Wine.find(id)
 		@varietal = Varietal.find(id)
 		erb :varietals
 	end
 	
+
+	get '/recommendations' do
+		response=HTTParty.get('http://services.wine.com/api/beta2/service.svc/json/catalog?search=cab&size=5&offset=10&apikey='+ENV['SECRET_KEY'])
+		@wines = JSON.parse(response.body)["Products"]["List"]
+		erb :wines
+	end
+
 end	

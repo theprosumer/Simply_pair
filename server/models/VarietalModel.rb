@@ -1,6 +1,4 @@
 class Varietal < ActiveRecord::Base
 
-	has_many :winevarietals
-	has_many :wines, through: :winevarietals
-
+	belongs_to :wine
 end

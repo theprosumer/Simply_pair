@@ -1,5 +1,8 @@
 node_modules
 
+#envelope items
+.env
+
 # Logs
 logs
 *.log

@@ -11,7 +11,8 @@
 
 <!--Display wine type and each associated wine pair-->
 <div id="typeTitle">
-	<h4>Simple Pairs for <%=@wine.wine_type%></h4>			
+	<h4>Simple Pairs for <%=@wine.wine_type%></h4>	
+	<p>Scroll to See Varietals</p>		
 </div>
 
 <!--Display each food Pair-->
@@ -23,10 +24,25 @@
 		<%end%>
 </div>
 
-<!--option to see varietals for this wine type-->
-<a href="/wines/pairs/:id/varietals"><div class="alert alert-warning">
-	See Varietals of <%=@wine.wine_type%>
-</div></a>
+<!--display varietals for this wine type-->
+<div>
+	<h4>Varietals of <%=@wine.wine_type%></h4>
+	<p>Click Below Recommendations</p>
+</div>		
+<div>
+<!--for each varietal-->
+		<%@wine.varietals.each do |varietal|%>
+		<div class="well col-md-4" >
+			<%=varietal.varietal_name%>	
+		</div>
+		<%end%>
+
+<div class="alert alert-info">
+	<a href="../varietals">See All Wine Varietals</a>
+</div>		
+</div>
+
+
 
 <!--Button to make another pairing-->
 <br>
