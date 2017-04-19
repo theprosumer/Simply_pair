@@ -8,9 +8,7 @@ This informaion-->
 	<div>
 		<% @varietals.each do |varietal| %>
 			<div class="well col-md-4">
-				
-					<%= varietal.varietal_name %>
-				
+				<a href="/wines/pairs/<%=varietal.varietal_name%>/recommendations"><%=varietal.varietal_name%></a>		
 			</div>			
 		<% end %>			
 	</div>

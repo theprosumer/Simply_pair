@@ -15,12 +15,17 @@
 	<p>Scroll to See Varietals</p>		
 </div>
 
+<!--Paragraph Test-->
+<div class="paircontent">
+	<p> </p>
+</div>
+
 <!--Display each food Pair-->
 <div>
 		<%@wine.winepairs.each do |winepair|%>
-		<div class="well col-4-md">
+<!-- 		<div class="well col-4-md"> -->
 			<%=winepair.food.food_type%>	
-		</div>
+<!-- 		</div> -->
 		<%end%>
 </div>
 
@@ -33,11 +38,11 @@
 <!--for each varietal-->
 		<%@wine.varietals.each do |varietal|%>
 		<div class="well col-md-4" >
-			<%=varietal.varietal_name%>	
+		<a href="/wines/pairs/<%=varietal.varietal_name%>/recommendations"><%=varietal.varietal_name%></a>	
 		</div>
 		<%end%>
 
-<div class="alert alert-info">
+<div class="col-md-4 alert alert-info">
 	<a href="../varietals">See All Wine Varietals</a>
 </div>		
 </div>

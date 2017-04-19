@@ -1,0 +1,27 @@
+<!--List varietals from API based on items clicked-->
+	<h4>Your Recommendations for: <%=@name%>
+	</h4>
+	<br>
+
+<div>	
+	<% @wines.each do |recommendation| %> 
+	<div class="col-md-4" align="center">
+		<div class="">
+			<div>
+				<img src="<%=recommendation["Labels"][0]["Url"]%>"/>
+			</div>
+			
+		<div class="" >
+			<p><%=recommendation["Name"]%></p>
+			<p>Region: <%=recommendation["Appellation"]["Region"]["Name"]%></p>	
+			<p>Priced From: <%=recommendation["PriceMin"]%> to: <%=recommendation["PriceMax"]%></p>
+			<a href="<%=recommendation["Url"]%>">See Prices to Ship to Your State</a>
+		</div>	
+		</div>	
+		<hr>	
+	</div>
+	<% end %>
+
+	
+</div>
+
