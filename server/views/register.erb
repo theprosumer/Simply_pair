@@ -1,22 +1,24 @@
-<!--Login and Registration Page-->
+<!--Login Page-->
 <div id="mainContainer">
+
 	<img src="/images/Wine-Cheese.png" class="img-responsive" alt="wine and cheese"/>
 
 	<!--App Name and Subtitle-->
+	<!-- <h1 id="AppName"><span>Simply</span><span>Pair</span></h1> -->
 	<h3>Wine & Food Pairing Made Simple</h3>
 
 
-	<!--Registration Form Inside A container-->
-<p>Welcome! </p><%=@message%>
+	<!--Login Form Inside A container-->
+
 	<div class="container">
     <div class="row">
 		<div class="col-md-4 col-md-offset-4">
     		<div class="panel panel-default">
 			  	<div class="panel-heading">
-			    	<p class="panel-title">To View and Save Favorites Please register.</p>
+			    	<p class="panel-title">Welcome Back. Please sign in</p>
 			 	</div>
 			  	<div class="panel-body">
-			    	<form accept-charset="UTF-8" action="/home/register" role="form" method="POST">
+			    	<form accept-charset="UTF-8" action="/user/register" role="form" method="POST">
                     <fieldset>
 			    	  	<div class="form-group">
 			    		    <input class="form-control" placeholder="Username" name="username" type="text">
@@ -37,12 +39,11 @@
 		</div>
 	</div>
 </div>
-<p>Already a Member? <a href="/home/login">Log In</a></p>
 
-<!--Message as a block element displays on failed login-->
-	<div id="loginMsg"><%=@message%></div>
+<div>Already a member? Please <a href="/user/login">Login</a></div>
+
+	<div id="regMsg"><%=@message%></div>
 </div>
-
 
 
 

@@ -11,27 +11,35 @@ the same page. renders in 'foods/:id/pairs' view -->
 <div id="typeTitle">
 	<h4>Wine Pairs for <%=@food.food_type%></h$>			
 </div>
-<div>
+<div class="alert bg-success">
+		<h5>These wines can pair successfully with <%=@food.food_type%>:</h5>
+		<br>
 		<%@food.winepairs.each do |winepair|%>
-		<div class="well col-4-md">
-			<%=winepair.wine.wine_type%>	
-		</div>
+<!-- 		<div class="well col-4-md"> -->
+			<%=winepair.wine.wine_type%>,	
+<!-- 		</div> -->
 		<%end%>
 </div>
 
 <div id="typeTitle">
 	<h4>Beer Pairs for <%=@food.food_type%></h$>			
 </div>
-<div>
+<div class="alert bg-warning">
+		<h5>Try these beers with <%=@food.food_type%>:</h5>
+		<br>
 		<%@food.beerpairs.each do |beerpair|%>
-		<div class="well col-4-md">
-			<%=beerpair.beer.beer_type%>	
-		</div>
+<!-- 		<div class="well col-4-md"> -->
+			<%=beerpair.beer.beer_type%>, 	
+<!-- 		</div> -->
 		<%end%>
+</div>
+
+<div class="col-md-4 alert alert-info">
+	<a href="/wines/varietals">See All Wine Varietals</a>
 </div>
 
 
 <!--Button to make another pairing-->
 <br>
-<a href="/foods"><button class="button btn-primary" id="pairAnother">Pair Another Food	
-</button></a>
+<a href="/foods"><div class="well" id="pairAnother">Pair Another Food	
+</div></a>

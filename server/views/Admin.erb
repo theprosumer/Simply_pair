@@ -14,3 +14,13 @@
 		<input type="" name="" placeholder="">
 	</form>
 </div>
+
+
+ <%# a form that can create a new restaurant%>
+  <form action='/restaurants' method='POST' class='centered'>
+    <label>name</label>
+    <input type='text' name='name' required/>
+    <label>location</label>
+    <input type='text' name='location' required/>
+    <input type='submit' value='create new restaurant' />
+  </form>

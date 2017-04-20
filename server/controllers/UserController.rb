@@ -12,6 +12,7 @@ class UserController < ApplicationController
 	end	
 
 	get '/favorites' do
+		@user = User.all
 		erb :favorites
 	end
 
@@ -32,12 +33,19 @@ class UserController < ApplicationController
 			session[:logged_in]	= true				#if so login
 			session[:username] 	= username
 			session[:user_id] 	= user.id
-			erb :register
+			erb :favorites
 		else		
 			@message = "Login unsuccessful" 
 			erb :login								#if unsuccessful try again
 		end	
 	end	
+
+	post '/auth/identity/callback' do
+		  u = User.find(env['omniauth.auth']['uid'])
+		  session[:user] = u
+		  session.options[:expire_after] = 2592000 unless params['remember'].nil? # 30 days
+		  [200, {:msg => 'User logged in'}.to_json]
+	end
 	
 	get '/register' do 								# registration route, renders registration
 		erb :register
@@ -50,24 +58,38 @@ class UserController < ApplicationController
 		@user.password = params["password"]
 		@user.save
 
-		erb :home
+		erb :favorites
 	end	
 	
 													# route for user to logout
 	get '/logout' do
 		session.destroy
-		redirect'/home/login'
+		redirect'/user/login'
+	end
+
+	get '/favorites' do 
+			if session [:logged_in]						# if so render home
+			@username = session[:username]
+			erb :favorites
+	
+		else										# if not require login
+			@message = "Please log in..."			# render login
+			erb :login 
+		end										 	# check session to see if logged in
+		
 	end
 	
 	get '/favorites/:id' do
 		id = params[:id]
 		@favorite = Favorite.find(id)
 		@user = User.find(id)
+
 		erb :favorites
 	end
 
 
 	post '/favorites' do
+
 		my_fav = JSON.parse(request.body.read)
 		@favorite = Favorite.new
 		@favorite.dish = my_fav["fav_dish"]

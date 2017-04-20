@@ -15,24 +15,18 @@
 	<p>Scroll to See Varietals</p>		
 </div>
 
-<!--Paragraph Test-->
-<div class="paircontent">
-	<p> </p>
-</div>
-
 <!--Display each food Pair-->
-<div>
+<div class="col-md-12 alert alert-success clearfix">
+	<%=@wine.wine_type%>s pair well with these foods: 
 		<%@wine.winepairs.each do |winepair|%>
-<!-- 		<div class="well col-4-md"> -->
-			<%=winepair.food.food_type%>	
-<!-- 		</div> -->
+			<%=winepair.food.food_type%>, 	
 		<%end%>
+	<hr>Try mixing and matching with your favorites and don't forget to save your Favs.	
 </div>
-
 <!--display varietals for this wine type-->
-<div>
+<div class="clearfix">
 	<h4>Varietals of <%=@wine.wine_type%></h4>
-	<p>Click Below Recommendations</p>
+	<p>Click Below for Recommendations</p>
 </div>		
 <div>
 <!--for each varietal-->
