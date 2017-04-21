@@ -30,7 +30,7 @@ class WineController < ApplicationController
 
 	get '/pairs/:name/recommendations/:page' do
 		@name = params[:name]
-		response=HTTParty.get("http://services.wine.com/api/beta2/service.svc/json/catalog?search=#{@name}&size=100&offset=1&apikey=#{ENV['MY_ID']}")
+		response=HTTParty.get("http://services.wine.com/api/beta2/service.svc/json/catalog?search=#{@name}&size=5&offset=1&apikey=#{ENV['MY_ID']}")
 		@wines = JSON.parse(response.body)["Products"]["List"]
 		
 		erb :recommendations

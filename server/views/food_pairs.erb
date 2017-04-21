@@ -1,7 +1,6 @@
 <!-- since food can be paired with a wine or beer display both pairs on
 the same page. renders in 'foods/:id/pairs' view -->
 
-
 <div class="categoryPic">
 	<img src="/images/foodbites.jpg " class="img-responsive" align="center"/>
 </div>
@@ -13,7 +12,7 @@ the same page. renders in 'foods/:id/pairs' view -->
 </div>
 <div class="alert bg-success">
 		<h5>These wines can pair successfully with <%=@food.food_type%>:</h5>
-		<br>
+
 		<%@food.winepairs.each do |winepair|%>
 <!-- 		<div class="well col-4-md"> -->
 			<%=winepair.wine.wine_type%>,	
@@ -26,7 +25,7 @@ the same page. renders in 'foods/:id/pairs' view -->
 </div>
 <div class="alert bg-warning">
 		<h5>Try these beers with <%=@food.food_type%>:</h5>
-		<br>
+	
 		<%@food.beerpairs.each do |beerpair|%>
 <!-- 		<div class="well col-4-md"> -->
 			<%=beerpair.beer.beer_type%>, 	
@@ -34,12 +33,14 @@ the same page. renders in 'foods/:id/pairs' view -->
 		<%end%>
 </div>
 
-<div class="col-md-4 alert alert-info">
+<div class="col-md-4 btn btn-info">
 	<a href="/wines/varietals">See All Wine Varietals</a>
 </div>
 
 
 <!--Button to make another pairing-->
 <br>
-<a href="/foods"><div class="well" id="pairAnother">Pair Another Food	
-</div></a>
+<a href="/foods">
+	<div class="btn" id="pairAnother">Pair Another Food	
+	</div>
+</a>

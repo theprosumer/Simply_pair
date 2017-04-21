@@ -21,7 +21,7 @@
 		<%@wine.winepairs.each do |winepair|%>
 			<%=winepair.food.food_type%>, 	
 		<%end%>
-	<hr>Try mixing and matching with your favorites and don't forget to save your Favs.	
+	<hr>Try mixing and matching with your favorites foods.	
 </div>
 <!--display varietals for this wine type-->
 <div class="clearfix">
@@ -32,7 +32,7 @@
 <!--for each varietal-->
 		<%@wine.varietals.each do |varietal|%>
 		<div class="well col-md-4" >
-		<a href="/wines/pairs/<%=varietal.varietal_name%>/recommendations"><%=varietal.varietal_name%></a>	
+		<a href="/wines/pairs/<%=varietal.varietal_name%>/recommendations/1"><%=varietal.varietal_name%></a>	
 		</div>
 		<%end%>
 
@@ -45,7 +45,7 @@
 
 <!--Button to make another pairing-->
 <br>
-<a href="/wines"><button class="button btn-primary" id="pairAnother">Pair Another Wine	
-</button></a>
+<a href="/wines"><div class="alert bg-primary" id="pairAnother">Pair Another Wine	
+</div></a>
 <br><br>
 <a href="/home/logout">Logout</a>

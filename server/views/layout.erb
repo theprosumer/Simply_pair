@@ -22,8 +22,18 @@
 		<!--Top Navigation Bar-->
 		<div class="row navbar navbar bg-danger">
 			<div class="top-bar" data-topbar role="navigation">
-				<a type="button" class="btn btn-default navbar-btn navbar-left glyphicon glyphicon-heart" href="/user/favorites"> MyFavs</a>
-				<a  type="button" class="btn btn-default navbar-btn navbar-right glyphicon glyphicon-off" href="/user/logout"> Logout</a>
+		<div class="dropdown">
+			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    MENU
+			  </button>
+			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			    	<a class="dropdown-item" href="/home">Home</a>
+			    	<a class="dropdown-item" href="/wines">Pair Wines</a>
+			    	<a class="dropdown-item" href="/beers">Pair Beers</a>
+			  </div>
+		</div>
+				<!--FUTURE DEV Add A Favorites Button Here-->
+				<!--FUTURE DEV Add A Logout Button Here -->
 			</div>
 		</div>
 
@@ -40,7 +50,8 @@
 		<div class="row navbar navbar bg-danger">
 			<div class="navBar">
 				<div class="leftNav"></div>
-				<div class="ctrNav"></div>
+				<div class="ctrNav"> 
+				</div>
 				<div class="rightNav"></div>
 			</div>
 		</div>

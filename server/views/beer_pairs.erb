@@ -12,11 +12,12 @@
 <div id="beerHeadline">
 	<h4>Simple Pairs for <%=@beer.beer_type%></h4>			
 </div>
-<div>
+<div class="alert bg-success">
+Beer goes with anything!  But seriously try pairing <%=@beer.beer_type%> with these foods: 
 		<%@beer.beerpairs.each do |beerpair|%>
-		<div class="well col-md-4" >
-			<%=beerpair.food.food_type%>	
-		</div>
+<!-- 		<div class="well col-md-4" > -->
+			<%=beerpair.food.food_type%>,	
+<!-- 		</div> -->
 		<%end%>
 </div>
 
@@ -24,13 +25,13 @@
 <!--Button to make another pairing-->
 <br>
 <a href="/beers">
-	<button class="button btn-primary" id="pairAnother"> Pair Another Beer	
-	</button><br><br>
-	<a href="/foods"><button class="button btn-primary" id="pairAnother">Pair by Food	
-</button></a>
-<br><br>
-<a href="/wines"><button class="button btn-danger" id="pairAnother">Pair by Wine	
-</button></a>
+	<div class="alert bg-warning" id="pairAnother"> Pair Another Beer	
+	</div>
+	<a href="/foods"><div class="alert bg-success" id="pairAnother">Pair by Food	
+</div></a>
+
+<a href="/wines"><div class="alert bg-primary" id="pairAnother">Pair by Wine	
+</div></a>
 </a>
-<br><br>
+
 <a href="/home/logout">Logout</a>
