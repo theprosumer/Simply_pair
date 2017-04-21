@@ -18,10 +18,15 @@ to a page where they can add their own favorite pairs. This allows the user to a
 	- Wine: Displays a list of food types that pair with that wine style
 	- Food: Displays a list of BOTH food and beer types that pair with that food.
 
+5. For Wines, the user will see a list of varietals that they can click on.  By clicking a varietal
+the user is returned a list of up to 100 orderable wine results.
+
+6.  By clicking on a wine the user is taken from the app to wine.com page for that item. 	
+
 Wireframes:
 
 View Wireframes at:
-file:///Users/JohnnyFavorite/Justinmind/7.8.0/work1/1893718668663507756/index.html#/screens/d12245cc-1680-458d-89dd-4f0d7fb22724
+https://www.justinmind.com/usernote/tests/24932006/24966510/24966512/index.html#/screens/d12245cc-1680-458d-89dd-4f0d7fb22724
 
 Screen Shots:
 
@@ -32,18 +37,4 @@ Screen Shots:
 ![register page](/screenshots/register-shot.jpg?raw=true "register view")
 ![wines page](/screenshots/wines-shot.jpg?raw=true "wines view")
 
-
-Real World Future Dev Opportunities
-1.  Use A Wine API - to get real product details and pairings, and info
-2.  Use A Beer API - to get real product details and pairings, and info
-3.  Use A Recipe API - and algorithm to parse ingedients and dish names to suggest a wine or beer
-4.  USe APIs to allow product ordering
-5.  White Label Software, to be used by any wine company, wine affiliate, website, retail stores, 
-    wineries, and plated meal services
-    as a giveaway to customers to help them order
-6.  Add cocktails - as a product restaurants and bars can use to help staff pair meals and suggestive 	  selling    
-7.  As a white label software can be customized by switching out APIs, and CSS elements for companies
-    wishing to use this as a marketing, sales or service tool or to pair with their own foods, wines, beers, ect;
-8. Users pair ratings, short comments
-9. See popular pairings for a dish/recipe
-10. scan upc or qr code  for suggested pairings    
+   
